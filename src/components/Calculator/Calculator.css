@@ -1,0 +1,17 @@
+.calculator__btn {
+  border: 1px solid #70544f;
+  border-radius: 50%;
+  background-color: #fff;
+  width: 30px;
+  height: 30px;
+  margin: 0 5px;
+  font-size: 1.2rem;
+  color: #70544f;
+  outline: none;
+}
+
+.calculator__quantity {
+  display: inline-block;
+  width: 20px;
+  text-align: center;
+}
