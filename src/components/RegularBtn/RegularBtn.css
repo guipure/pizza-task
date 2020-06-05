@@ -1,0 +1,15 @@
+.regular-btn {
+  padding: 0.9rem;
+  background-color: #009471;
+  color: #fff;
+  font-size: 100%;
+  font-weight: 700;
+  border: none;
+  border-radius: 2rem;
+  text-transform: uppercase;
+  outline: none;
+}
+
+.regular-btn:hover {
+  background-color: #cf1717;
+}

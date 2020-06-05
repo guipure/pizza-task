@@ -1,0 +1,13 @@
+.login-btn {
+  position: fixed;
+  top: 2rem;
+  right: 23vw;
+  background-color: #cf1717;
+  color: #fff;
+  height: 50px;
+  width: 50px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  outline: none;
+}

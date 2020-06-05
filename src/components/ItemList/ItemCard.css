@@ -1,0 +1,26 @@
+.item-card {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0px 10px 20px rgba(31,32,65,0.05);
+}
+
+.item-card__img {
+  max-width: 300px;
+}
+
+.item-card__footer {
+  padding: 0 1rem 1rem;
+}
+
+.item-card__controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item-card__price {
+  font-size: 100%;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
