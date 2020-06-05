@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import './CartItem.css'
 import DeleteBtn from './DeleteBtn'
 import Context from '../../context'
+import Calculator from '../Calculator/Calculator'
 
 export default function CartItem({ item }) {
   const { cart, setCart } = useContext(Context)
@@ -10,20 +11,6 @@ export default function CartItem({ item }) {
   function deleteItem(item) {
     setCart(
       cart.filter(x => x.id !== item.id)
-    )
-  }
-
-  function changeQuantity(num) {
-    setCart(
-      cart.map(x => {
-        if (x.id === item.id) {
-          x.quantity += num
-        }
-        return x
-      })
-    )
-    setCart(
-      cart.filter(x => x.quantity > 0)
     )
   }
 
@@ -37,9 +24,7 @@ export default function CartItem({ item }) {
         </div>
       </div>
       <div className="cart-item__block">
-        <button type="button" className="cart-item__btn" onClick={changeQuantity.bind(null, -1)}>-</button>
-        <span className="cart-item__quantity">{item.quantity}</span>
-        <button type="button" className="cart-item__btn" onClick={changeQuantity.bind(null, 1)}>+</button>
+        <Calculator item={item} />
         <DeleteBtn item={item} deleteItem={deleteItem} />
       </div>
     </div>
