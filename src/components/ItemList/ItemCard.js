@@ -12,17 +12,17 @@ export default function ItemCard({ item }) {
 
   return (
     <div className="item-card">
-      <img src={src} className="item-card__img" alt={item.name}></img>
-      <div className="item-card__footer">
-        <div>
+      <div>
+        <img src={src} className="item-card__img" alt={item.name}></img>
+        <div className="item-card__info">
           <h3>{item.name}</h3>
           <p>{item.description}</p>
         </div>
-        <div className="item-card__controls">
-          <AddBtn item={item} />
-          {isInCart && <Calculator item={item} />}
-          <span className="item-card__price">{item.price + ' €'}</span>
-        </div>
+      </div>
+      <div className="item-card__footer">
+        <AddBtn item={item} />
+        {isInCart && <Calculator item={item} />}
+        <span className="item-card__price">{item.price + ' €'}</span>
       </div>
     </div>
   )

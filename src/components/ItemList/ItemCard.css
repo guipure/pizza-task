@@ -3,20 +3,24 @@
   border-radius: 0.5rem;
   overflow: hidden;
   box-shadow: 0px 10px 20px rgba(31,32,65,0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .item-card__img {
   max-width: 300px;
 }
 
-.item-card__footer {
-  padding: 0 1rem 1rem;
+.item-card__info {
+  padding: 0 1rem;
 }
 
-.item-card__controls {
+.item-card__footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 1rem;
 }
 
 .item-card__price {
