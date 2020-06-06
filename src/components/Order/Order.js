@@ -1,29 +1,21 @@
 import React, { useState } from 'react'
 import './Order.css'
 import RegularBtn from '../RegularBtn/RegularBtn'
+import Modal from '../Modal/Modal'
 
 export default function Order() {
   const [isOpen, setOpen] = useState(false)
-
-  function openOrder() {
-    setOpen(true)
-  }
-
-  // function closeOrder() {
-  //   setOpen(false)
-  // }
+  const openOrder = () => setOpen(true)
+  const closeOrder = () => setOpen(false)
 
   return (
     <React.Fragment>
       <RegularBtn onclick={openOrder.bind(null)}>Order now</RegularBtn>
       {isOpen && (
-        <div className="order">
-          <div className="order-body">
-            <h2>Order</h2>
-          </div>
-      </div>
+        <Modal onclose={closeOrder.bind(null)}>
+          <h2>Order</h2>
+        </Modal>
       )}
-    </React.Fragment>
-    
+    </React.Fragment>   
   )
 }

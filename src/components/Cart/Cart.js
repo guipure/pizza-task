@@ -5,9 +5,12 @@ import Context from '../../context'
 import CartItem from './CartItem'
 import RegularBtn from '../RegularBtn/RegularBtn'
 import Order from '../Order/Order'
+import Modal from '../Modal/Modal'
 
 export default function Cart() {
   const [isOpen, setOpen] = React.useState(false)
+  const openCart = () => setOpen(true)
+  const closeCart = () => setOpen(false)
   const { cart } = useContext(Context)
   const quantity = cart.reduce((a, b) => ({quantity: a.quantity + b.quantity}), {quantity: 0}).quantity
   const EmptyCart = (
@@ -23,25 +26,14 @@ export default function Cart() {
     </React.Fragment>
   )
 
-  function openCart() {
-    setOpen(true)
-  }
-
-  function closeCart() {
-    setOpen(false)
-  }
-
   return (
     <React.Fragment>
       <CartBtn quantity={quantity} openCart={openCart}/>
       {isOpen && (
-        <div className="cart">
-        <div className="cart-body">
+        <Modal onclose={closeCart.bind(null)}>
           <h2>Cart</h2>
           {cart.length ? CartContent : EmptyCart}
-          <button type="button" className="cart__close-btn" onClick={closeCart.bind(null)}>&times;</button>
-        </div>
-        </div>
+        </Modal>
       )}
     </React.Fragment>
   )

@@ -20,6 +20,7 @@ function App() {
         <Menu />
         <ItemList />
       </div>
+      <div id="modal-root" />
     </Context.Provider>
   );
 }
