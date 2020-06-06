@@ -4,7 +4,7 @@ import CartBtn from './CartBtn'
 import Context from '../../context'
 import CartItem from './CartItem'
 import RegularBtn from '../RegularBtn/RegularBtn'
-import OrderBtn from '../Order/OrderBtn'
+import Order from '../Order/Order'
 
 export default function Cart() {
   const [isOpen, setOpen] = React.useState(false)
@@ -13,13 +13,13 @@ export default function Cart() {
   const EmptyCart = (
     <React.Fragment>
       <p>The cart is empty</p>
-      <RegularBtn onclick={closeCart} label="Choose something" />
+      <RegularBtn onclick={closeCart}>Choose something</RegularBtn>
     </React.Fragment>
   )
   const CartContent = (
     <React.Fragment>
       {cart.map((item, i) => <CartItem item={item} key={i} />)}
-      <OrderBtn />
+      <Order />
     </React.Fragment>
   )
 

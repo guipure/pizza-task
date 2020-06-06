@@ -1,8 +1,8 @@
 import React from 'react'
 import './RegularBtn.css'
 
-export default function RegularBtn({ onclick, label }) {
+export default function RegularBtn({ onclick, children }) {
   return (
-    <button type="button" className="regular-btn" onClick={onclick}>{label}</button>
+    <button type="button" className="regular-btn" onClick={onclick}>{children}</button>
   )
 }

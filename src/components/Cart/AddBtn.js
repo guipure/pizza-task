@@ -27,6 +27,6 @@ export default function AddBtn({ item }) {
   }
   
   return (
-    <RegularBtn onclick={addToCart.bind(null, item)} label="Add to cart" />
+    <RegularBtn onclick={addToCart.bind(null, item)}>Add to cart</RegularBtn>
   )
 }
