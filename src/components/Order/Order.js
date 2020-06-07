@@ -1,21 +1,15 @@
-import React, { useState } from 'react'
+import React from 'react'
+import { Link } from "react-router-dom";
 import './Order.css'
 import RegularBtn from '../RegularBtn/RegularBtn'
-import Modal from '../Modal/Modal'
 
 export default function Order() {
-  const [isOpen, setOpen] = useState(false)
-  const openOrder = () => setOpen(true)
-  const closeOrder = () => setOpen(false)
-
   return (
     <React.Fragment>
-      <RegularBtn onclick={openOrder.bind(null)}>Order now</RegularBtn>
-      {isOpen && (
-        <Modal onclose={closeOrder.bind(null)}>
-          <h2>Order</h2>
-        </Modal>
-      )}
-    </React.Fragment>   
+      <h1>Order info</h1>
+      <Link to="/">
+        <RegularBtn>back to cart</RegularBtn>
+      </Link>
+    </React.Fragment>
   )
 }

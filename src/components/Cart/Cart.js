@@ -4,8 +4,14 @@ import CartBtn from './CartBtn'
 import Context from '../../context'
 import CartItem from './CartItem'
 import RegularBtn from '../RegularBtn/RegularBtn'
-import Order from '../Order/Order'
+import OrderBtn from '../Order/OrderBtn'
 import Modal from '../Modal/Modal'
+import {
+  HashRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
+import Order from '../Order/Order'
 
 export default function Cart() {
   const [isOpen, setOpen] = React.useState(false)
@@ -22,7 +28,7 @@ export default function Cart() {
   const CartContent = (
     <React.Fragment>
       {cart.map((item, i) => <CartItem item={item} key={i} />)}
-      <Order />
+      <OrderBtn />
     </React.Fragment>
   )
 
@@ -31,8 +37,17 @@ export default function Cart() {
       <CartBtn quantity={quantity} openCart={openCart}/>
       {isOpen && (
         <Modal onclose={closeCart.bind(null)}>
-          <h2>Cart</h2>
-          {cart.length ? CartContent : EmptyCart}
+          <Router>
+            <Switch>
+              <Route path="/order">
+                <Order />
+              </Route>
+              <Route path="/">
+                <h2>Cart</h2>
+                {cart.length ? CartContent : EmptyCart}
+              </Route>
+            </Switch>
+          </Router>
         </Modal>
       )}
     </React.Fragment>
