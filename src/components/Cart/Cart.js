@@ -12,6 +12,7 @@ import {
   Route,
 } from "react-router-dom";
 import Order from '../Order/Order'
+import CartTotal from './CartTotal'
 
 export default function Cart() {
   const [isOpen, setOpen] = React.useState(false)
@@ -28,6 +29,7 @@ export default function Cart() {
   const CartContent = (
     <React.Fragment>
       {cart.map((item, i) => <CartItem item={item} key={i} />)}
+      <CartTotal />
       <OrderBtn />
     </React.Fragment>
   )
