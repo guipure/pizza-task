@@ -3,13 +3,13 @@ import './Cart.css'
 import CartBtn from './CartBtn'
 import Context from '../../context'
 import CartItem from './CartItem'
-import RegularBtn from '../RegularBtn/RegularBtn'
 import OrderBtn from '../Order/OrderBtn'
 import Modal from '../Modal/Modal'
 import {
   HashRouter as Router,
   Switch,
   Route,
+  Redirect,
 } from "react-router-dom";
 import Order from '../Order/Order'
 import CartTotal from './CartTotal'
@@ -23,7 +23,6 @@ export default function Cart() {
   const EmptyCart = (
     <React.Fragment>
       <p>The cart is empty</p>
-      <RegularBtn onclick={closeCart}>Choose something</RegularBtn>
     </React.Fragment>
   )
   const CartContent = (
@@ -40,6 +39,7 @@ export default function Cart() {
       {isOpen && (
         <Modal onclose={closeCart.bind(null)}>
           <Router>
+            <Redirect to="/" />
             <Switch>
               <Route path="/order">
                 <Order />
