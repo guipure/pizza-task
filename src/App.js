@@ -6,16 +6,9 @@ import Context from './context'
 
 function App() {
   const [cart, setCart] = React.useState([])
-  const [currency, setCurrency] = React.useState('€')
-
-  function toggleCurrency() {
-    setCurrency(
-      currency === '€' ? '$' : '€'
-    )
-  }
 
   return (
-    <Context.Provider value={{ cart, setCart, currency, toggleCurrency }}>
+    <Context.Provider value={{ cart, setCart }}>
       <div className="wrapper">
         <Menu />
         <ItemList />
