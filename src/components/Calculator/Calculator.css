@@ -8,6 +8,7 @@
   font-size: 1.2rem;
   color: #70544f;
   outline: none;
+  cursor: pointer;
 }
 
 .calculator__quantity {
