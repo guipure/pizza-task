@@ -4,6 +4,7 @@ import Context from '../../context'
 
 export default function Calculator({ item }) {
   const { cart, setCart } = useContext(Context)
+  const quantity = cart.filter(x => x.id === item.id)[0].quantity
   
   function changeQuantity(num) {
     setCart(
@@ -22,7 +23,7 @@ export default function Calculator({ item }) {
   return (
     <div>        
       <button type="button" className="calculator__btn" onClick={changeQuantity.bind(null, -1)}>-</button>
-      <span className="calculator__quantity">{item.quantity}</span>
+      <span className="calculator__quantity"><strong>{quantity}</strong></span>
       <button type="button" className="calculator__btn" onClick={changeQuantity.bind(null, 1)}>+</button>
     </div>
   )
