@@ -1,5 +1,6 @@
 import React from 'react'
 import './Modal.css'
+import ReactDOM from 'react-dom';
 
 
 export default function Modal({ children, onclose }) {
@@ -8,13 +9,17 @@ export default function Modal({ children, onclose }) {
     onclose()
     document.body.style.overflow = 'auto'
   }
-
-  return (
+  const modalRoot = document.getElementById('modal-root')
+  const modalWindow = (
     <div className="modal">
       <div className="modal-body">
         {children}
         <button type="button" className="modal__close-btn" onClick={closeModal}>&times;</button>
       </div>
     </div>
+  )
+
+  return ReactDOM.createPortal(
+    modalWindow, modalRoot
   )
 }
