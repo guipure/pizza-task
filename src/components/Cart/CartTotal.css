@@ -1,8 +1,20 @@
 .cart-total {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   border-top: 1px dashed #70544f;
+}
+
+.cart-total__main {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.cart-total__label {
+  padding-right: 20px;
+}
+
+.cart-total__delivery {
+  text-align: right;
+  margin-bottom: 0;
 }
 
 .cart-total__usd,
@@ -14,4 +26,3 @@
 .cart-total__usd {
   opacity: 0.5;
 }
-
