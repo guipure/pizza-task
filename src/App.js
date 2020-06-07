@@ -1,11 +1,16 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Menu from './components/Menu/Menu'
 import ItemList from './components/ItemList/ItemList';
 import Context from './context'
 
 
 function App() {
-  const [cart, setCart] = React.useState([])
+  const savedCart = JSON.parse(localStorage.getItem('cart'))
+  const [cart, setCart] = React.useState(savedCart ? savedCart : [])
+
+  useEffect(() => {
+    localStorage.setItem('cart', JSON.stringify(cart))
+  })
 
   return (
     <Context.Provider value={{ cart, setCart }}>
