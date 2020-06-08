@@ -1,0 +1,20 @@
+.history-item {
+  border-bottom: 1px dotted #70544f;
+  text-align: left;
+}
+
+.history-item:last-child {
+  border: none;
+}
+
+.history-item__li {
+  list-style: none;
+}
+
+.history-item__total {
+  padding-left: 40px;
+}
+
+.history-item__total-usd {
+  opacity: 0.5;
+}
