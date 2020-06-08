@@ -2,15 +2,5 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-.menu__currency-btn {
-  background: none;
-  border: 1px solid #70544f;
-  border-radius: 5px;
-  height: 40px;
-  color: #70544f;
-  font-size: 1.2rem;
-  font-weight: bold;
-  outline: none;
+  margin: 20px auto;
 }
