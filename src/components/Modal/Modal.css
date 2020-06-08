@@ -23,16 +23,38 @@
 
 .modal__close-btn {
   position: absolute;
-  right: -20px;
-  top: -20px;
-  border: none;
+  right: -15px;
+  top: -15px;
+  border: 5px solid #fff;
   background-color: #000;
   color: #fff;
   font-size: 30px;
   font-weight: bold;
-  height: 40px;
-  width: 40px;
+  height: 50px;
+  width: 50px;
   border-radius: 50%;
   outline: none;
   cursor: pointer;
+}
+
+@media (max-width: 1400px) {
+  .modal-body {
+    width: 70vw;
+  }
+}
+
+@media (max-width: 1200px) {
+  .modal-body {
+    width: 80vw;
+  }
+}
+
+@media (max-width: 900px) {
+  .modal-body {
+    width: 90vw;
+  }
+  .modal__close-btn {
+    right: 10px;
+    top: 10px;
+  }
 }

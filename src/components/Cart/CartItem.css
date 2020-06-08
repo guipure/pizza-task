@@ -1,13 +1,31 @@
 .cart-item {
   display: flex;
   margin-bottom: 1rem;
-  min-width: 500px;
   justify-content: space-between;
 }
 
 .cart-item__img {
   width: 100px;
   margin-right: 10px;
+}
+
+@media (max-width: 540px) {
+  .cart-item {
+    flex-direction: column;
+    border-bottom: 1px dotted #70544f;
+  }
+
+  .cart-item:nth-last-child(4) {
+    border-bottom: none;
+  }
+
+  .cart-item__block {
+    justify-content: space-between;
+  }
+
+  .cart-item__label {
+    flex-grow: 1;
+}
 }
 
 .cart-item__block {
@@ -26,4 +44,5 @@
 
 .cart-item__total-price{
   margin-right: 10px;
+  white-space: nowrap;
 }

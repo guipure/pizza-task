@@ -7,9 +7,11 @@ import Cart from '../Cart/Cart'
 export default function Menu() {
   return (
     <div className="menu">
-      <img src="logo.png" alt="logo"></img>
-      <Login />
-      <Cart />
+      <img src={process.env.PUBLIC_URL + "/logo.png"} alt="logo"></img>
+      <nav className="menu__nav">
+        <Login />
+        <Cart />
+      </nav>
     </div>
   )
 }

@@ -1,3 +1,8 @@
+.calculator {
+  display: flex;
+  align-items: center;
+}
+
 .calculator__btn {
   border: 1px solid #70544f;
   border-radius: 50%;

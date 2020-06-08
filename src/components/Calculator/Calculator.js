@@ -21,7 +21,7 @@ export default function Calculator({ item }) {
   }
 
   return (
-    <div>        
+    <div className="calculator">        
       <button type="button" className="calculator__btn" onClick={changeQuantity.bind(null, -1)}>-</button>
       <span className="calculator__quantity"><strong>{quantity}</strong></span>
       <button type="button" className="calculator__btn" onClick={changeQuantity.bind(null, 1)}>+</button>
