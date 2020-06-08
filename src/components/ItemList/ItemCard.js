@@ -6,7 +6,7 @@ import Context from '../../context'
 
 
 export default function ItemCard({ item }) {
-  const src = '/photos/' + item.id.toString() + '.jpg'
+  const src = process.env.PUBLIC_URL + '/photos/' + item.id.toString() + '.jpg'
   const { cart } = useContext(Context)
   const isInCart = cart.filter(x => x.id === item.id).length ? true : false
 

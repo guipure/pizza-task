@@ -6,7 +6,7 @@ import Calculator from '../Calculator/Calculator'
 
 export default function CartItem({ item }) {
   const { cart, setCart } = useContext(Context)
-  const src = '/photos/' + item.id.toString() + '.jpg'
+  const src = process.env.PUBLIC_URL + '/photos/' + item.id.toString() + '.jpg'
   const totalPrice = Math.round(item.price * item.quantity * 100) / 100 + ' €'
   
   function deleteItem(item) {
