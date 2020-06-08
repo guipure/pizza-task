@@ -1,5 +1,6 @@
 {
   "name": "pizza-task",
+  "homepage": "https://guipure.github.io/pizza-task/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
