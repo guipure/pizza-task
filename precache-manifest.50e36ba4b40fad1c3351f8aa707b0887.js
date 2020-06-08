@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "aaf12371bd8e6c1c8037f06a57f11d7b",
+    "revision": "ca37390edd2c794b7b08e4f6d72d25a5",
     "url": "/pizza-task/index.html"
   },
   {
-    "revision": "ac33ca7ab32afdb7c8ab",
-    "url": "/pizza-task/static/css/main.87f8d95b.chunk.css"
+    "revision": "15e66bf3c918a72fc79e",
+    "url": "/pizza-task/static/css/main.b65e1a07.chunk.css"
   },
   {
     "revision": "1fb19355fe40f8cf5ed9",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/pizza-task/static/js/2.baf4f652.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ac33ca7ab32afdb7c8ab",
-    "url": "/pizza-task/static/js/main.c76e26bc.chunk.js"
+    "revision": "15e66bf3c918a72fc79e",
+    "url": "/pizza-task/static/js/main.4fa3b69f.chunk.js"
   },
   {
     "revision": "fa6d3bbc0c8261725b65",
