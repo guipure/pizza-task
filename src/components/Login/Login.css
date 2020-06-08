@@ -1,0 +1,16 @@
+.login__email {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 400px;
+  margin: 0 auto 2rem;
+}
+
+.login__input {
+  color: inherit;
+  font-size: 1.2rem;
+  height: 2.5rem;
+  background-color: #eee;
+  border: none;
+  outline: none;
+}
